@@ -340,6 +340,11 @@
     gap: 24px 32px;
     margin-top: 20px;
   }
+  .testcase-area-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
   .testcase-area h4 {
     font-size: 14px;
     font-weight: 600;
@@ -472,9 +477,26 @@
   </div>
 </section>
 
+<!-- ENVIRONMENT -->
+<section>
+  <div class="section-label">02 · Environment</div>
+  <h2>We're testing on Staging</h2>
+  <p style="max-width:680px;">All testing for this bug bash runs against the <strong>Staging</strong> environment. Make sure you're set up there before you sign in.</p>
+
+  <div class="links-grid" style="margin-top:24px;">
+    <a class="link-card" href="https://staging.sandbox.maple.com/">
+      <div>
+        <div class="platform">Staging environment</div>
+        <div style="margin-top:4px;">staging.sandbox.maple.com</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
 <!-- LOGIN -->
 <section>
-  <div class="section-label">02 · Sign in</div>
+  <div class="section-label">03 · Sign in</div>
   <h2>Pick your login path</h2>
 
   <div class="grid-2" style="margin-top:28px;">
@@ -492,19 +514,25 @@
     <div class="card">
       <div class="platform">Path B</div>
       <h3 style="margin-top:8px;">You don't have a U.S. phone number</h3>
-      <p style="font-size:14px;">Pick a shared U.S. number from the spreadsheet and claim it.</p>
+      <p style="font-size:14px;">Pick a test U.S. number from the spreadsheet and claim it.</p>
       <div class="steps">
         <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Open the spreadsheet</strong><p>Go to the <em>Available Phones</em> tab.</p></div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Claim a free number</strong><p>Write your name next to an available U.S. phone.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Claim a free number</strong><p>Write your name next to an available test phone.</p></div></div>
         <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Sign in with that number</strong><p>The OTP code is always <span class="mono">000000</span>.</p></div></div>
       </div>
     </div>
   </div>
+
+  <div style="margin-top: 24px;">
+    <a class="btn" href="https://docs.google.com/spreadsheets/d/1efttCVVj4AQS1eKtKWFbcbm7GXML-DKIDG6J2iDD60s/edit?usp=sharing">Open spreadsheet →</a>
+    <a class="btn btn-ghost copy-link-btn" href="https://docs.google.com/spreadsheets/d/1efttCVVj4AQS1eKtKWFbcbm7GXML-DKIDG6J2iDD60s/edit?usp=sharing" style="margin-left:8px;">Copy link</a>
+  </div>
+
 </section>
 
 <!-- BUG REPORTING -->
 <section>
-  <div class="section-label">03 · Report</div>
+  <div class="section-label">04 · Report</div>
   <h2>How to file a bug</h2>
   <p style="max-width:680px;">Every bug — no matter how small — goes through the Google Form. One bug per submission.</p>
 
@@ -516,7 +544,7 @@
 
   <div style="margin-top: 24px;">
     <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSewYVQNqt65ckpxWQKP3roAs3JjNCaHmRuL0E9GxVAHvCFuXg/viewform?usp=publish-editor">Open bug form →</a>
-    <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSewYVQNqt65ckpxWQKP3roAs3JjNCaHmRuL0E9GxVAHvCFuXg/viewform?usp=publish-editor" style="margin-left:8px;">Copy link</a>
+    <a class="btn btn-ghost copy-link-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSewYVQNqt65ckpxWQKP3roAs3JjNCaHmRuL0E9GxVAHvCFuXg/viewform?usp=publish-editor" style="margin-left:8px;">Copy link</a>
   </div>
 
   <div class="callout">
@@ -526,7 +554,7 @@
 
 <!-- GROUPS -->
 <section>
-  <div class="section-label">04 · Test groups</div>
+  <div class="section-label">05 · Test groups</div>
   <h2>Find your group & scope</h2>
   <p style="max-width:680px;">Three groups, three focus areas. Stay within your scope so we cover everything without overlap.</p>
 
@@ -534,7 +562,7 @@
     <div class="card">
       <span class="group-pill g1">Group 1 · Payroll</span>
       <h3>Payroll flows</h3>
-      <p>Payroll onboarding, Payroll Documents, Payroll Settings, Paystubs / Earnings.</p>
+      <p>Payroll onboarding, Payroll documents, Payroll settings, Paystubs / Earnings.</p>
       <ul class="members">
         <li>Eli</li>
         <li>Rafael</li>
@@ -545,7 +573,7 @@
     <div class="card">
       <span class="group-pill g2">Group 2 · Punches</span>
       <h3>Punch flow</h3>
-      <p>Clock-in/out, breaks, standalone clock-in, Presence Verification, Signature Flow.</p>
+      <p>Clock-in/out, breaks, Standalone clock-in, Presence verification, Signature.</p>
       <ul class="members">
         <li>Frank</li>
         <li>Mim</li>
@@ -569,7 +597,7 @@
 
 <!-- TEST CASE SUGGESTIONS -->
 <section>
-  <div class="section-label">05 · Test ideas</div>
+  <div class="section-label">06 · Test ideas</div>
   <h2>Suggestions to get you started</h2>
   <p style="max-width:760px;">The lists below are <strong>just starting points</strong> — not a checklist to tick off. Be creative: try odd state combinations, race conditions, weird inputs, and flows we didn't think of. The unexpected paths are where the interesting bugs live.</p>
 
@@ -595,19 +623,21 @@
               <li>Multiple facilities</li>
             </ul>
           </div>
-          <div class="testcase-area">
-            <h4>Payroll Settings</h4>
-            <ul>
-              <li>View information</li>
-              <li>Edit information</li>
-            </ul>
-          </div>
-          <div class="testcase-area">
-            <h4>Payroll Documents</h4>
-            <ul>
-              <li>View documents</li>
-              <li>Download documents</li>
-            </ul>
+          <div class="testcase-area-stack">
+            <div class="testcase-area">
+              <h4>Payroll Settings</h4>
+              <ul>
+                <li>View information</li>
+                <li>Edit information</li>
+              </ul>
+            </div>
+            <div class="testcase-area">
+              <h4>Payroll Documents</h4>
+              <ul>
+                <li>View documents</li>
+                <li>Download documents</li>
+              </ul>
+            </div>
           </div>
           <div class="testcase-area">
             <h4>Earnings</h4>
@@ -630,20 +660,6 @@
         <h3>Punch flow</h3>
         <div class="testcase-areas">
           <div class="testcase-area">
-            <h4>Timekeeping disabled</h4>
-            <ul>
-              <li>Punches should not be possible — no clock-in / clock-out / break buttons visible</li>
-            </ul>
-          </div>
-          <div class="testcase-area">
-            <h4>Timekeeping enabled — Kiosk only</h4>
-            <ul>
-              <li>No punch options shown in the app (clock in / break / clock out)</li>
-              <li>Always show text directing the worker to the kiosk</li>
-              <li>After clock in, show the punch timeline screen</li>
-            </ul>
-          </div>
-          <div class="testcase-area">
             <h4>Timekeeping enabled — in-app punches</h4>
             <ul>
               <li>Punch action buttons appear (clock in, breaks, clock out)</li>
@@ -655,12 +671,13 @@
               <li>Shift status displays correctly and matches the clock-in/out window and timecard state (in progress, break in progress, shift starts in…)</li>
             </ul>
           </div>
+          <div class="testcase-area-stack">
           <div class="testcase-area">
-            <h4>Standalone clock-in</h4>
+            <h4>Timekeeping enabled — Kiosk only</h4>
             <ul>
-              <li><strong>Enabled:</strong> show the option to clock in without a scheduled shift</li>
-              <li><strong>Disabled:</strong> no unscheduled clock-in button appears</li>
-              <li><strong>Enabled + multiple units:</strong> bottom sheet appears to select the unit after clock in</li>
+              <li>No punch options shown in the app (clock in / break / clock out)</li>
+              <li>Always show text directing the worker to the kiosk</li>
+              <li>After clock in, show the punch timeline screen</li>
             </ul>
           </div>
           <div class="testcase-area">
@@ -671,6 +688,23 @@
               <li><strong>No auto break:</strong> start break / skip break options appear</li>
               <li><strong>No auto break:</strong> break times show on the timeline</li>
             </ul>
+          </div>
+          </div>
+          <div class="testcase-area-stack">
+          <div class="testcase-area">
+            <h4>Timekeeping disabled</h4>
+            <ul>
+              <li>Punches should not be possible — no clock-in / clock-out / break buttons visible</li>
+            </ul>
+          </div>
+          <div class="testcase-area">
+            <h4>Standalone clock-in</h4>
+            <ul>
+              <li><strong>Enabled:</strong> show the option to clock in without a scheduled shift</li>
+              <li><strong>Disabled:</strong> no unscheduled clock-in button appears</li>
+              <li><strong>Enabled + multiple units:</strong> bottom sheet appears to select the unit after clock in</li>
+            </ul>
+          </div>
           </div>
         </div>
       </div>
@@ -699,6 +733,16 @@
               <li>Redirect to the all time-offs screen works</li>
             </ul>
           </div>
+          <div class="testcase-area">
+            <h4>Other screens</h4>
+            <ul>
+              <li>Support flow works from More screen</li>
+              <li>Support ticket flow works from login screen</li>
+              <li>Personal information shows correct information</li>
+              <li>Personal information shows facility selector if multiple</li>
+              <li>Sign out flow shows confirmation and works correctly</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -712,8 +756,8 @@
 
 <!-- QUICK LINKS -->
 <section>
-  <div class="section-label">06 · Quick links</div>
-  <h2>Shortcuts</h2>
+  <div class="section-label">07 · Shortcuts</div>
+  <h2>Quick links</h2>
 
   <div class="links-grid">
     <a class="link-card" href="https://docs.google.com/spreadsheets/d/1efttCVVj4AQS1eKtKWFbcbm7GXML-DKIDG6J2iDD60s/edit?usp=sharing">
@@ -755,6 +799,37 @@
         panels.forEach(function (p) {
           p.classList.toggle('active', p.id === 'panel-' + target);
         });
+      });
+    });
+
+    var copyBtns = document.querySelectorAll('.copy-link-btn');
+    copyBtns.forEach(function (copyBtn) {
+      copyBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var url = copyBtn.getAttribute('href');
+        var original = copyBtn.textContent;
+
+        function showCopied() {
+          copyBtn.textContent = 'Copied!';
+          setTimeout(function () { copyBtn.textContent = original; }, 1500);
+        }
+
+        function fallbackCopy() {
+          var ta = document.createElement('textarea');
+          ta.value = url;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); showCopied(); } catch (err) {}
+          document.body.removeChild(ta);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(showCopied, fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
       });
     });
   })();
